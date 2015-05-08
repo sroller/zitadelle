@@ -10,7 +10,7 @@
 (defn splash []
   {:status 200
    :headers {"Content-Type" "text/plain"}
-   :body (pr-str ["Hello" :from 'Heroku])})
+   :body (pr-str ["Hallo Du," :from 'Heroku])})
 
 (defroutes app
   (GET "/camel" {{input :input} :params}
