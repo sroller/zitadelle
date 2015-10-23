@@ -10,7 +10,7 @@
 (defn splash []
   {:status 200
    :headers {"Content-Type" "text/html"}
-   :body (str "<html><body><h1>Hier gibt's noch nix zu gucken, geh'n se weiter ...</h1></body></html>")})
+   :body (str "<html><body><h1>Hier gibt's noch nix zu gucken, <a href='http://2048game.com'>geh spielen ...</a></h1></body></html>")})
 
 (defroutes app
   (GET "/camel" {{input :input} :params}
