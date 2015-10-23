@@ -10,7 +10,7 @@
 (defn splash []
   {:status 200
    :headers {"Content-Type" "text/plain"}
-   :body (pr-str "Hier gibt's noch nix zu gucken, geh'n se weiter ...")})
+   :body (str "Hier gibt's noch nix zu gucken, geh'n se weiter ...")})
 
 (defroutes app
   (GET "/camel" {{input :input} :params}
@@ -35,7 +35,7 @@
        (route/not-found (slurp (io/resource "404.html")))))
 
 (defn -main [& [port]]
-  (let [port (Integer. (or port (env :port) 5000))]
+  (let [port (Integer. (or port (env :port) 3000))]
     (jetty/run-jetty (site #'app) {:port port :join? false})))
 
 ;; For interactive development:
