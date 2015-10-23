@@ -9,8 +9,8 @@
 
 (defn splash []
   {:status 200
-   :headers {"Content-Type" "text/plain"}
-   :body (str "Hier gibt's noch nix zu gucken, geh'n se weiter ...")})
+   :headers {"Content-Type" "text/html"}
+   :body (str "<html><body><h1>Hier gibt's noch nix zu gucken, geh'n se weiter ...</h1></body></html>")})
 
 (defroutes app
   (GET "/camel" {{input :input} :params}
